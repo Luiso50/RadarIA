@@ -12,6 +12,6 @@ Landing page de una newsletter semanal sobre herramientas de inteligencia artifi
    git push -u origin main
    ```
 
-3. En GitHub, abre **Settings > Pages**, selecciona **Deploy from a branch** y elige `main` y la carpeta `/(root)`.
+3. En GitHub, abre **Settings > Pages** y, en **Build and deployment**, selecciona **GitHub Actions** como fuente.
 
 GitHub publicará automáticamente la página cada vez que subas cambios a la rama `main`.
