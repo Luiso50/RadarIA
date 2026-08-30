@@ -1,0 +1,298 @@
+:root {
+  --ink: #121212;
+  --paper: #f7f5ef;
+  --lime: #c6f255;
+  --muted: #696862;
+  --line: #d9d7ce;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", sans-serif;
+}
+
+main,
+footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: 32px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 27px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  color: inherit;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  text-decoration: none;
+}
+
+.brand span {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 2px 5px;
+  color: var(--ink);
+  background: var(--lime);
+  font-size: 0.8rem;
+  letter-spacing: -0.04em;
+  transform: rotate(-3deg);
+}
+
+.nav-link {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.hero {
+  max-width: 875px;
+  padding-block: clamp(80px, 13vw, 150px) 88px;
+}
+
+.eyebrow,
+.benefit-number {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+}
+
+.eyebrow {
+  color: #55632d;
+}
+
+h1,
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.055em;
+}
+
+h1 {
+  max-width: 850px;
+  margin: 18px 0 25px;
+  font-size: clamp(3.25rem, 8vw, 6.8rem);
+  line-height: 0.94;
+}
+
+h1 em {
+  position: relative;
+  font-style: normal;
+  z-index: 0;
+}
+
+h1 em::after {
+  position: absolute;
+  right: -4px;
+  bottom: 4px;
+  left: -4px;
+  height: 0.28em;
+  background: var(--lime);
+  content: "";
+  z-index: -1;
+}
+
+.hero-copy {
+  max-width: 570px;
+  margin: 0 0 30px;
+  color: #4b4a45;
+  font-size: 1.18rem;
+  line-height: 1.55;
+}
+
+.signup-form {
+  display: flex;
+  max-width: 560px;
+  gap: 9px;
+}
+
+input,
+button {
+  min-height: 54px;
+  border-radius: 0;
+  font: inherit;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #aaa79c;
+  padding: 0 16px;
+  background: #fffefa;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 3px solid #a2cb42;
+  outline-offset: 2px;
+}
+
+button {
+  border: 1px solid var(--ink);
+  padding: 0 20px;
+  cursor: pointer;
+  color: var(--ink);
+  background: var(--lime);
+  font-weight: 700;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+button:hover {
+  background: #d5ff6a;
+  transform: translate(-2px, -2px);
+}
+
+button span {
+  margin-left: 7px;
+  font-size: 1.3em;
+}
+
+.form-note,
+.form-success {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.form-success {
+  color: #356000;
+  font-weight: 700;
+}
+
+.social-proof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 42px;
+  font-size: 0.9rem;
+}
+
+.social-proof p {
+  margin: 0;
+}
+
+.avatars {
+  display: flex;
+  padding-left: 8px;
+}
+
+.avatars span {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  margin-left: -8px;
+  place-items: center;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  color: white;
+  background: #352c55;
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.avatars span:nth-child(2) { background: #b66038; }
+.avatars span:nth-child(3) { background: #44735c; }
+.avatars span:nth-child(4) { background: #837238; }
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.benefits article {
+  min-height: 240px;
+  padding: 32px 34px 35px 0;
+}
+
+.benefits article + article {
+  padding-left: 34px;
+  border-left: 1px solid var(--line);
+}
+
+.benefit-number {
+  color: #6a7940;
+}
+
+h2 {
+  margin: 44px 0 10px;
+  font-size: 1.45rem;
+}
+
+.benefits article p:last-child {
+  max-width: 260px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+footer {
+  padding-block: 25px 40px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 650px) {
+  main,
+  footer {
+    padding-inline: 20px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding-block: 75px 65px;
+  }
+
+  .signup-form {
+    flex-direction: column;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits article {
+    min-height: 0;
+    padding: 28px 0;
+  }
+
+  .benefits article + article {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+}
